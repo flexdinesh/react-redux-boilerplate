@@ -19,9 +19,4 @@ describe('<IssueLink />', () => {
     const renderedComponent = shallow(<IssueLink id={id} />);
     expect(renderedComponent.prop('id')).toEqual(id);
   });
-
-  it('should not adopt an invalid attribute', () => {
-    const renderedComponent = shallow(<IssueLink attribute={'test'} />);
-    expect(renderedComponent.prop('attribute')).toBeUndefined();
-  });
 });

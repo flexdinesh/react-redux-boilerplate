@@ -8,7 +8,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { FormattedNumber } from 'react-intl';
 
 import { makeSelectCurrentUser } from 'containers/App/selectors';
 import ListItem from 'components/ListItem';
@@ -36,7 +35,7 @@ export class RepoListItem extends React.PureComponent { // eslint-disable-line r
         </RepoLink>
         <IssueLink href={`${item.html_url}/issues`} target="_blank">
           <IssueIcon />
-          <FormattedNumber value={item.open_issues_count} />
+          {item.open_issues_count}
         </IssueLink>
       </Wrapper>
     );

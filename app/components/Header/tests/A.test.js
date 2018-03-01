@@ -19,9 +19,4 @@ describe('<A />', () => {
     const renderedComponent = mount(<A id={id} />);
     expect(renderedComponent.find('a').prop('id')).toEqual(id);
   });
-
-  it('should not adopt an invalid attribute', () => {
-    const renderedComponent = mount(<A attribute={'test'} />);
-    expect(renderedComponent.find('a').prop('attribute')).toBeUndefined();
-  });
 });
