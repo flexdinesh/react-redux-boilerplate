@@ -7,7 +7,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
@@ -22,7 +21,6 @@ import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
-import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
@@ -55,23 +53,15 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         </Helmet>
         <div>
           <CenteredSection>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
+            <H2>Start your next react project in seconds</H2>
+            <p>A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</p>
           </CenteredSection>
           <Section>
-            <H2>
-              <FormattedMessage {...messages.trymeHeader} />
-            </H2>
+            <H2>Try me!</H2>
             <Form onSubmit={this.props.onSubmitForm}>
               <label htmlFor="username">
-                <FormattedMessage {...messages.trymeMessage} />
-                <AtPrefix>
-                  <FormattedMessage {...messages.trymeAtPrefix} />
-                </AtPrefix>
+              Show Github repositories by
+                <AtPrefix>@</AtPrefix>
                 <Input
                   id="username"
                   type="text"

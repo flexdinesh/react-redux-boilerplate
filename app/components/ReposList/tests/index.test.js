@@ -1,6 +1,5 @@
 import { shallow, mount } from 'enzyme';
 import React from 'react';
-import { IntlProvider } from 'react-intl';
 
 import RepoListItem from 'containers/RepoListItem';
 import List from 'components/List';
@@ -17,12 +16,10 @@ describe('<ReposList />', () => {
 
   it('should render an error if loading failed', () => {
     const renderedComponent = mount(
-      <IntlProvider locale="en">
-        <ReposList
-          loading={false}
-          error={{ message: 'Loading failed!' }}
-        />
-      </IntlProvider>
+      <ReposList
+        loading={false}
+        error={{ message: 'Loading failed!' }}
+      />
     );
     expect(renderedComponent.text()).toMatch(/Something went wrong/);
   });
