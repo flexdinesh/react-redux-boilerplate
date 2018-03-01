@@ -1,0 +1,18 @@
+.list-wrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    max-height: 30em;
+    overflow-y: auto;
+    padding: 0 1em;
+  }
+}

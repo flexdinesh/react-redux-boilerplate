@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import NormalIssueIcon from 'components/IssueIcon';
+import { IssueIcon as NormalIssueIcon } from 'components/Icons';
 
 const IssueIcon = styled(NormalIssueIcon)`
   fill: #ccc;
