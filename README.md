@@ -34,7 +34,7 @@
 
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 
-The whole react community knows and will unanimously agree that [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) is the ultimate starter template for kickstarting any React project. It's setup with all the industry best practices and standards. But it also has a lot more than what you just need to start a react-redux app. It took me quite some time to get my head around what was happening in the codebase and it's clearly not for beginners. They quote this right in their readme,
+The whole react community knows and will unanimously agree that [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) is the ultimate starter template for kickstarting a React project. It's setup with all the industry best practices and standards. But it also has a lot more than what you just need to start a react-redux app. It took me quite some time to get my head around what was happening in the codebase and it's clearly not for starters. They quote this right in their readme,
 
 > Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
 
@@ -42,6 +42,24 @@ So it involves a lot of additional learning curve to get started with [react-boi
 
 
 ## Features
+
+This boilerplate features all the latest tools and practices in the industry.
+
+_React.js_ - React 16, React Router 5
+
+_Redux.js_ - Redux saga, Redux immutable and Reselect
+
+_Babel_ - ES6, ESNext, Airbnb with React/Recommended config
+
+_Webpack_ - Webpack 3, Hot Reloading, Code Splitting, Optimized Prod Build and more
+
+_Test_ - Jest with Enzyme
+
+_Lint_ - ESlint
+
+_Styles_ - SCSS Styling
+
+Here are a few highlights to look out for in this boilerplate - 
 
 <dl>
   <dt>Instant feedback</dt>
@@ -73,7 +91,6 @@ But wait... there's more!
   - *Catch problems:* TravisCI setup included by default, so your
     tests get run automatically on each code push.
 
-<sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router, redux-saga, FontFaceObserver</i></sub>
 
 ## Quick start
 
