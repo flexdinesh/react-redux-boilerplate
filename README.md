@@ -1,6 +1,8 @@
-# React Redux Boilerplate
+<img src="https://raw.githubusercontent.com/flexdinesh/react-redux-boilerplate/master/app/components/Header/images/banner.jpg" alt="react redux boilerplate banner" align="center" />
 
-<div align="center">A minimal React-Redux boilerplate with all the best practices</div>
+<br />
+
+<div align="center">A minimal, beginner friendly React-Redux boilerplate with all the industry best practices</div>
 
 <br />
 
@@ -17,8 +19,6 @@
   <a href="https://travis-ci.org/flexdinesh/react-redux-boilerplate">
     <img src="https://travis-ci.org/flexdinesh/react-redux-boilerplate.svg" alt="Build Status" />
   </a>
-</div>
-<div align="center">
   <!-- Gitter -->
   <a href="https://gitter.im/flexdinesh/react-redux-boilerplate">
     <img src="https://camo.githubusercontent.com/54dc79dc7da6b76b17bc8013342da9b4266d993c/68747470733a2f2f6261646765732e6769747465722e696d2f6d78737462722f72656163742d626f696c6572706c6174652e737667" alt="Gitter Chat" />
@@ -31,20 +31,33 @@
   <sub>Created by <a href="https://twitter.com/flexdinesh">Dinesh Pandiyan</a></sub>
 </div>
 
+
+## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
+
+The whole react community knows and will unanimously agree that [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) is the ultimate starter template for kickstarting any React project. It's setup with all the industry best practices and standards. But it also has a lot more than what you just need to start a react-redux app. It took me quite some time to get my head around what was happening in the codebase and it's clearly not for beginners. They quote this right in their readme,
+
+> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
+
+So it involves a lot of additional learning curve to get started with [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate). That's why I stripped it down and made this _leaner, **beginner friendly**_ boilerplate without all the additional complexity.
+
+
 ## Features
 
 <dl>
   <dt>Instant feedback</dt>
   <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
 
-  <dt>Predictable state management</dt>
-  <dd>Unidirectional data flow allows for change logging and time travel debugging.</dd>
-
   <dt>Next generation JavaScript</dt>
   <dd>Use template strings, object destructuring, arrow functions, JSX syntax and more, today.</dd>
 
+  <dt>Component Specific Styles</dt>
+  <dd>Separate styles for each component. Style in the good old scss way but still keep it abstracted for each component.</dd>
+
   <dt>Industry-standard routing</dt>
   <dd>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</dd>
+
+  <dt>Predictable state management</dt>
+  <dd>Unidirectional data flow allows for change logging and time travel debugging.</dd>
 
   <dt>SEO</dt>
   <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content. (eg. Google)</dd>
