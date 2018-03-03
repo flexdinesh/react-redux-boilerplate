@@ -6,7 +6,7 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 
 import ListItem from 'components/ListItem';
-import { RepoListItem } from '../index';
+import RepoListItem from '../RepoListItem';
 
 const renderComponent = (props = {}) => render(
   <RepoListItem {...props} />

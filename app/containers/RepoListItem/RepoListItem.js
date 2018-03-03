@@ -6,17 +6,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 
-import { makeSelectCurrentUser } from 'containers/App/selectors';
 import ListItem from 'components/ListItem';
 import { IssueIcon } from 'components/Icons';
 import './style.scss';
 
-export class RepoListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export default class RepoListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
-    const item = this.props.item;
+    const { item } = this.props;
     let nameprefix = '';
 
     // If the repository is owned by a different person than we got the data for
@@ -49,7 +46,3 @@ RepoListItem.propTypes = {
   item: PropTypes.object,
   currentUser: PropTypes.string,
 };
-
-export default connect(createStructuredSelector({
-  currentUser: makeSelectCurrentUser(),
-}))(RepoListItem);
