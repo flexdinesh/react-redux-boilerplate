@@ -38,7 +38,7 @@ The whole React community knows and will unanimously agree that [react-boilerpla
 
 > Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
 
-So it involves a lot of additional learning curve to get started with [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate). That's why I stripped it down and made this _leaner, **beginner friendly**_ boilerplate without all the additional complexity.
+So it involves a lot of additional learning curve to get started with [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate). That's why I forked it, stripped it down and made this _leaner, **beginner friendly**_ boilerplate without all the additional complexity.
 
 
 ## Features
@@ -49,7 +49,7 @@ _React.js_ - React 16, React Router 5
 
 _Redux.js_ - Redux saga, Redux immutable and Reselect
 
-_Babel_ - ES6, ESNext, Airbnb with React/Recommended config
+_Babel_ - ES6, ESNext, Airbnb and React/Recommended config
 
 _Webpack_ - Webpack 3, Hot Reloading, Code Splitting, Optimized Prod Build and more
 
