@@ -8,9 +8,7 @@ import { shallow, render } from 'enzyme';
 import ListItem from 'components/ListItem';
 import RepoListItem from '../RepoListItem';
 
-const renderComponent = (props = {}) => render(
-  <RepoListItem {...props} />
-);
+const renderComponent = (props = {}) => render(<RepoListItem {...props} />);
 
 describe.only('<RepoListItem />', () => {
   let item;
@@ -19,26 +17,24 @@ describe.only('<RepoListItem />', () => {
   beforeEach(() => {
     item = {
       owner: {
-        login: 'flexdinesh',
+        login: 'flexdinesh'
       },
       html_url: 'https://github.com/flexdinesh/react-redux-boilerplate',
       name: 'react-redux-boilerplate',
       open_issues_count: 20,
-      full_name: 'flexdinesh/react-redux-boilerplate',
+      full_name: 'flexdinesh/react-redux-boilerplate'
     };
   });
 
   it('should render a ListItem', () => {
-    const renderedComponent = shallow(
-      <RepoListItem item={item} />
-    );
+    const renderedComponent = shallow(<RepoListItem item={item} />);
     expect(renderedComponent.find(ListItem).length).toBe(1);
   });
 
   it('should not render the current username', () => {
     const renderedComponent = renderComponent({
       item,
-      currentUser: item.owner.login,
+      currentUser: item.owner.login
     });
     expect(renderedComponent.text()).not.toContain(item.owner.login);
   });
@@ -46,7 +42,7 @@ describe.only('<RepoListItem />', () => {
   it('should render usernames that are not the current one', () => {
     const renderedComponent = renderComponent({
       item,
-      currentUser: 'nikgraf',
+      currentUser: 'nikgraf'
     });
     expect(renderedComponent.text()).toContain(item.owner.login);
   });

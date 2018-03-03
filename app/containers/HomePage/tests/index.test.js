@@ -16,7 +16,9 @@ describe('<HomePage />', () => {
     const renderedComponent = shallow(
       <HomePage loading error={false} repos={[]} />
     );
-    expect(renderedComponent.contains(<ReposList loading error={false} repos={[]} />)).toEqual(true);
+    expect(
+      renderedComponent.contains(<ReposList loading error={false} repos={[]} />)
+    ).toEqual(true);
   });
 
   it('should render fetch the repos on mount if a username exists', () => {
@@ -33,12 +35,7 @@ describe('<HomePage />', () => {
 
   it('should not call onSubmitForm if username is an empty string', () => {
     const submitSpy = jest.fn();
-    mount(
-      <HomePage
-        onChangeUsername={() => {}}
-        onSubmitForm={submitSpy}
-      />
-    );
+    mount(<HomePage onChangeUsername={() => {}} onSubmitForm={submitSpy} />);
     expect(submitSpy).not.toHaveBeenCalled();
   });
 

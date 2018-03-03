@@ -20,6 +20,7 @@
       }
     },
     "rules": {
+      "function-paren-newline": "off",
       "no-param-reassign": "off",
       "arrow-parens": [
         "error",
@@ -51,7 +52,8 @@
       ],
       "jsx-a11y/aria-props": 2,
       "jsx-a11y/heading-has-content": 0,
-      "jsx-a11y/href-no-hash": 2,
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": "off",
       "jsx-a11y/label-has-for": 2,
       "jsx-a11y/mouse-events-have-key-events": 2,
       "jsx-a11y/role-has-required-aria-props": 2,
@@ -63,6 +65,7 @@
       "no-use-before-define": 0,
       "prefer-template": 2,
       "react/forbid-prop-types": 0,
+      "react/jsx-curly-brace-presence": "off",
       "react/jsx-first-prop-new-line": [
         2,
         "multiline"

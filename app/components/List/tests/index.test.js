@@ -6,17 +6,12 @@ import List from '../index';
 
 describe('<List />', () => {
   it('should render the component if no items are passed', () => {
-    const renderedComponent = shallow(
-      <List component={ListItem} />
-    );
+    const renderedComponent = shallow(<List component={ListItem} />);
     expect(renderedComponent.find(ListItem)).toBeDefined();
   });
 
   it('should pass all items props to rendered component', () => {
-    const items = [
-      { id: 1, name: 'Hello' },
-      { id: 2, name: 'World' },
-    ];
+    const items = [{ id: 1, name: 'Hello' }, { id: 2, name: 'World' }];
 
     const component = ({ item }) => <ListItem>{item.name}</ListItem>; // eslint-disable-line react/prop-types
 

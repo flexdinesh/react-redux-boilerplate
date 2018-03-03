@@ -6,7 +6,7 @@ const logger = require('./util//logger');
 const argv = require('./util/argv');
 const port = require('./util//port');
 const setup = require('./middlewares/frontendMiddleware');
-const resolve = require('path').resolve;
+const { resolve } = require('path');
 const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
