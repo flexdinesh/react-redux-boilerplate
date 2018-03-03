@@ -101,6 +101,12 @@ But wait... there's more!
 
 Now you're ready build your beautiful React Application!
 
+
+## Info
+
+These are the things I stripped out from [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) - _github project rules, ngrok tunneling, shjs, service worker, webpack dll plugin, i18n, styled-components, code generators and a few more._
+
+
 ## License
 
 MIT license, Copyright (c) 2018 Dinesh Pandiyan.
