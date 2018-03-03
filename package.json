@@ -1,16 +1,16 @@
 {
-  "name": "react-boilerplate",
-  "version": "3.5.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "A minimal react-redux boilerplate with all the best practices",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/flexdinesh/react-redux-boilerplate.git"
   },
   "engines": {
     "npm": ">=3",
     "node": ">=5"
   },
-  "author": "Max Stoiber",
+  "author": "Dinesh Pandiyan",
   "license": "MIT",
   "scripts": {
     "prebuild": "npm run build:clean",

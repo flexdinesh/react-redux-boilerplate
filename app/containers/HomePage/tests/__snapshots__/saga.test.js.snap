@@ -15,7 +15,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "https://api.github.com/users/mxstbr/repos?type=all&sort=updated",
+      "https://api.github.com/users/flexdinesh/repos?type=all&sort=updated",
     ],
     "context": null,
     "fn": [Function],
@@ -38,7 +38,7 @@ Object {
   "@@redux-saga/IO": true,
   "CALL": Object {
     "args": Array [
-      "https://api.github.com/users/mxstbr/repos?type=all&sort=updated",
+      "https://api.github.com/users/flexdinesh/repos?type=all&sort=updated",
     ],
     "context": null,
     "fn": [Function],

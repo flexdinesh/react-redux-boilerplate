@@ -49,7 +49,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <div className="home-page">
           <section className="centered">
             <h2>Start your next react project in seconds</h2>
-            <p>A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</p>
+            <p>A minimal <i>React-Redux</i> boilerplate with all the best practices</p>
           </section>
           <section>
             <h2>Try me!</h2>
@@ -60,7 +60,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                 <input
                   id="username"
                   type="text"
-                  placeholder="mxstbr"
+                  placeholder="flexdinesh"
                   value={this.props.username}
                   onChange={this.props.onChangeUsername}
                 />

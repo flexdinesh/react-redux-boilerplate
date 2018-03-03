@@ -19,7 +19,7 @@ describe('homeReducer', () => {
   });
 
   it('should handle the changeUsername action correctly', () => {
-    const fixture = 'mxstbr';
+    const fixture = 'flexdinesh';
     const expectedResult = state.set('username', fixture);
 
     expect(homeReducer(state, changeUsername(fixture))).toEqual(expectedResult);

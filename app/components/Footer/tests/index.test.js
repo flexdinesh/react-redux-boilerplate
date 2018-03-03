@@ -15,8 +15,6 @@ describe('<Footer />', () => {
 
   it('should render the credits', () => {
     const renderedComponent = shallow(<Footer />);
-    expect(renderedComponent.contains(
-      <section>Made with love by {<a href="https://twitter.com/mxstbr">Max Stoiber</a>}</section>
-    )).toBe(true);
+    expect(renderedComponent.text()).toContain('Dinesh Pandiyan');
   });
 });

@@ -8,7 +8,7 @@ import { mount } from 'enzyme';
 import Button from '../index';
 
 const handleRoute = () => {};
-const href = 'http://mxstbr.com';
+const href = 'http://twitter.com/flexdinesh';
 const children = (<h1>Test</h1>);
 const renderComponent = (props = {}) => mount(
   <Button href={href} {...props}>

@@ -19,12 +19,12 @@ describe.only('<RepoListItem />', () => {
   beforeEach(() => {
     item = {
       owner: {
-        login: 'mxstbr',
+        login: 'flexdinesh',
       },
-      html_url: 'https://github.com/react-boilerplate/react-boilerplate',
-      name: 'react-boilerplate',
+      html_url: 'https://github.com/flexdinesh/react-redux-boilerplate',
+      name: 'react-redux-boilerplate',
       open_issues_count: 20,
-      full_name: 'react-boilerplate/react-boilerplate',
+      full_name: 'flexdinesh/react-redux-boilerplate',
     };
   });
 

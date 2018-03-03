@@ -27,12 +27,12 @@ describe('<ReposList />', () => {
   it('should render the repositories if loading was successful', () => {
     const repos = [{
       owner: {
-        login: 'mxstbr',
+        login: 'flexdinesh',
       },
-      html_url: 'https://github.com/react-boilerplate/react-boilerplate',
-      name: 'react-boilerplate',
+      html_url: 'https://github.com/flexdinesh/react-redux-boilerplate',
+      name: 'react-redux-boilerplate',
       open_issues_count: 20,
-      full_name: 'react-boilerplate/react-boilerplate',
+      full_name: 'flexdinesh/react-redux-boilerplate',
     }];
     const renderedComponent = shallow(
       <ReposList
