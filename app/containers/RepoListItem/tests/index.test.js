@@ -12,7 +12,7 @@ const renderComponent = (props = {}) => render(
   <RepoListItem {...props} />
 );
 
-describe('<RepoListItem />', () => {
+describe.only('<RepoListItem />', () => {
   let item;
 
   // Before each test reset the item data for safety

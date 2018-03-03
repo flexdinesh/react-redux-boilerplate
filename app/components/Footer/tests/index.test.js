@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import A from 'components/A';
 import Footer from '../index';
 
 describe('<Footer />', () => {
@@ -17,7 +16,7 @@ describe('<Footer />', () => {
   it('should render the credits', () => {
     const renderedComponent = shallow(<Footer />);
     expect(renderedComponent.contains(
-      <section>Made with love by {<A href="https://twitter.com/mxstbr">Max Stoiber</A>}</section>
+      <section>Made with love by {<a href="https://twitter.com/mxstbr">Max Stoiber</a>}</section>
     )).toBe(true);
   });
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import H1 from 'components/H1';
 import FeaturePage from '../index';
 
 describe('<FeaturePage />', () => {
@@ -10,7 +9,7 @@ describe('<FeaturePage />', () => {
       <FeaturePage />
     );
     expect(renderedComponent.contains(
-      <H1>Features</H1>
+      <h1>Features</h1>
     )).toBe(true);
   });
 

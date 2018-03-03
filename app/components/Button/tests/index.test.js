@@ -39,11 +39,6 @@ describe('<Button />', () => {
     expect(onClickSpy).toHaveBeenCalled();
   });
 
-  it('should have a className attribute', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find('a').prop('className')).toBeDefined();
-  });
-
   it('should not adopt a type attribute when rendering an <a> tag', () => {
     const type = 'text/html';
     const renderedComponent = renderComponent({ href, type });
