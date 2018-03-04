@@ -12,6 +12,7 @@ const webpack = require('webpack');
 process.noDeprecation = true;
 
 module.exports = (options) => ({
+  mode: options.mode,
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
     path: path.resolve(process.cwd(), 'build'),
@@ -28,9 +29,7 @@ module.exports = (options) => ({
         },
       },
       {
-        // Preprocess our own .css files
-        // This is the place to add your own loaders (e.g. sass/less etc.)
-        // for a list of loaders, see https://webpack.js.org/loaders/#styling
+        // Preprocess our own .scss files
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -52,31 +51,39 @@ module.exports = (options) => ({
           {
             loader: 'image-webpack-loader',
             options: {
-              progressive: true,
-              optimizationLevel: 7,
-              interlaced: false,
-              pngquant: {
-                quality: '65-90',
-                speed: 4,
-              },
+              query: {
+                gifsicle: {
+                  interlaced: true
+                },
+                mozjpeg: {
+                  progressive: true
+                },
+                optipng: {
+                  optimizationLevel: 7
+                },
+                pngquant: {
+                  quality: '65-90',
+                  speed: 4
+                }
+              }
             },
           },
         ],
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: 'html-loader'
       },
       {
         test: /\.json$/,
-        use: 'json-loader',
+        use: 'json-loader'
       },
       {
         test: /\.(mp4|webm)$/,
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10000,
+            limit: 10000
           },
         },
       },
@@ -85,7 +92,7 @@ module.exports = (options) => ({
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
       // make fetch available
-      fetch: 'exports-loader?self.fetch!whatwg-fetch',
+      fetch: 'exports-loader?self.fetch!whatwg-fetch'
     }),
 
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
@@ -93,10 +100,9 @@ module.exports = (options) => ({
     // drop any unreachable code.
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       },
-    }),
-    new webpack.NamedModulesPlugin(),
+    })
   ]),
   resolve: {
     modules: ['app', 'node_modules'],
@@ -104,15 +110,22 @@ module.exports = (options) => ({
       '.js',
       '.jsx',
       '.scss',
-      '.react.js',
+      '.react.js'
     ],
     mainFields: [
       'browser',
       'jsnext:main',
-      'main',
-    ],
+      'main'
+    ]
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
   performance: options.performance || {},
+  optimization: {
+    namedModules: true,
+    splitChunks: {
+      name: 'vendor',
+      minChunks: 2
+    }
+  }
 });

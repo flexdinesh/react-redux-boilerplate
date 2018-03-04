@@ -8,7 +8,7 @@ function createWebpackMiddleware(compiler, publicPath) {
     noInfo: true,
     publicPath,
     silent: true,
-    stats: 'errors-only',
+    stats: 'errors-only'
   });
 }
 
