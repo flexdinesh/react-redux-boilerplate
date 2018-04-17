@@ -11,3 +11,6 @@ npm-debug.log
 
 # Lock file
 yarn.lock
+
+# Logs
+yarn-error.log
