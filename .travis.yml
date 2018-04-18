@@ -6,7 +6,7 @@ node_js:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install libpng16-dev
+  - sudo apt-get install libpng12-dev
   
 script:
   - npm run test
