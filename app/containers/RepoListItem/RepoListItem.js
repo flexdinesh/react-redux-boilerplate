@@ -6,7 +6,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ListItem from 'components/ListItem';
 import { IssueIcon } from 'components/Icons';
 import './style.scss';
