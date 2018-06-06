@@ -9,8 +9,5 @@ stats.json
 npm-debug.log
 .idea
 
-# Lock file
-yarn.lock
-
 # Logs
 yarn-error.log
