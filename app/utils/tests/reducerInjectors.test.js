@@ -60,8 +60,6 @@ describe('reducer injectors', () => {
     });
 
     it('it should not check a store if the second argument is true', () => {
-      Reflect.deleteProperty(store, 'dispatch');
-
       expect(() => injectReducer('test', reducer)).not.toThrow();
     });
 
