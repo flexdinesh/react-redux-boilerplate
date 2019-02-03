@@ -15,17 +15,20 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
    * when initial state username is not null, submit the form to load repos
    */
   componentDidMount() {
-    if (this.props.username && this.props.username.trim().length > 0) {
-      this.props.onSubmitForm();
+    const { username, onSubmitForm } = this.props;
+    if (username && username.trim().length > 0) {
+      onSubmitForm();
     }
   }
 
   render() {
-    const { loading, error, repos } = this.props;
+    const {
+      loading, error, repos, username, onChangeUsername, onSubmitForm
+    } = this.props;
     const reposListProps = {
       loading,
       error,
-      repos,
+      repos
     };
 
     return (
@@ -37,20 +40,22 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <div className="home-page">
           <section className="centered">
             <h2>Start your next react project in seconds</h2>
-            <p>A minimal <i>React-Redux</i> boilerplate with all the best practices</p>
+            <p>
+              A minimal <i>React-Redux</i> boilerplate with all the best practices
+            </p>
           </section>
           <section>
             <h2>Try me!</h2>
-            <form onSubmit={this.props.onSubmitForm}>
+            <form onSubmit={onSubmitForm}>
               <label htmlFor="username">
-              Show Github repositories by
+                Show Github repositories by
                 <span className="at-prefix">@</span>
                 <input
                   id="username"
                   type="text"
                   placeholder="flexdinesh"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
+                  value={username}
+                  onChange={onChangeUsername}
                 />
               </label>
             </form>
@@ -64,15 +69,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
 HomePage.propTypes = {
   loading: PropTypes.bool,
-  error: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.bool,
-  ]),
-  repos: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
-  ]),
+  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
+  onChangeUsername: PropTypes.func
 };

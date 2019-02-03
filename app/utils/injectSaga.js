@@ -18,24 +18,24 @@ import getInjectors from './sagaInjectors';
 export default ({ key, saga, mode }) => (WrappedComponent) => {
   class InjectSaga extends React.Component {
     static WrappedComponent = WrappedComponent;
-    static displayName = `withSaga(${(WrappedComponent.displayName || WrappedComponent.name || 'Component')})`;
+
+    static displayName = `withSaga(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
+
     static contextTypes = {
-      store: PropTypes.object.isRequired,
+      store: PropTypes.object.isRequired
     };
+
+    injectors = getInjectors(this.context.store); // eslint-disable-line react/destructuring-assignment
 
     componentWillMount() {
       const { injectSaga } = this.injectors;
-
       injectSaga(key, { saga, mode }, this.props);
     }
 
     componentWillUnmount() {
       const { ejectSaga } = this.injectors;
-
       ejectSaga(key);
     }
-
-    injectors = getInjectors(this.context.store);
 
     render() {
       return <WrappedComponent {...this.props} />;

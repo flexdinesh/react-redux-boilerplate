@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const List = (props) => {
-  const ComponentToRender = props.component;
+const List = ({ component, items }) => {
+  const ComponentToRender = component;
   let content = (<div></div>);
 
   // If we have items, render them
-  if (props.items) {
-    content = props.items.map((item) => (
+  if (items) {
+    content = items.map((item) => (
       <ComponentToRender key={`item-${item.id}`} item={item} />
     ));
   } else {
