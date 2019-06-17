@@ -3,8 +3,8 @@ language: node_js
 os: osx
 
 node_js:
+  - 10
   - 8
-  - 6
   
 script:
   - npm run test
